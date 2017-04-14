@@ -1,7 +1,7 @@
 /******************
  * @author Ahmad R. Khan
  *
- * Lambda function that integrates Twilio Programmable SMS with Amazon Lex.
+ * An AWS Lambda function that integrates Twilio Programmable SMS with Amazon Lex.
  * [Twilio SMS]<--->[API Gateway]<--->[this lambda function]<--->[Lex]
  ******************/
 

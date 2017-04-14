@@ -1,13 +1,17 @@
 {
   "name": "lex-twilio-integration",
   "version": "1.0.0",
-  "description": "",
+  "description": "An AWS Lambda function that integrates Twilio Programmable SMS with Amazon Lex.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ahmad R. Khan",
   "license": "GNU",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filanthropic/LexTwilioIntegration.git"
+  },
   "dependencies": {
     "aws-sdk": "^2.39.0",
     "qs": "^6.3.1",

@@ -24,7 +24,7 @@ exports.handler = (event, context, callback) => {
 		//	validate and filter bad/empty messages
 		//	************************
 		if(!twilioSMS.hasOwnProperty('Body')){
-			var error = new Error("Cannot process message wihout a Body.");
+			var error = new Error("Cannot process message without a Body.");
 			callback(error);
 		} else if (!event.params.header.hasOwnProperty('X-Twilio-Signature')) {
 			var error = new Error("Twilio signature not found.");

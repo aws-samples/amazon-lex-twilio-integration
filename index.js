@@ -26,7 +26,9 @@ exports.handler = (event, context, callback) => {
 		if(!twilioSMS.hasOwnProperty('Body')){
 			var error = new Error("Cannot process message without a Body.");
 			callback(error);
-		} else if (!event.params.header.hasOwnProperty('X-Twilio-Signature')) {
+		}
+		/******COMMENTED OUT FOR TESTING; UNCOMMENT FOR PROD **********
+		else if (!event.params.header.hasOwnProperty('X-Twilio-Signature')) {
 			var error = new Error("Twilio signature not found.");
 			callback(error);
 		//	************************
@@ -39,7 +41,9 @@ exports.handler = (event, context, callback) => {
 																		twilioSMS)) {
 			var error = new Error("Twilio signature could not be validated.");
 			callback(error);
-		} else {
+		}
+		****************************************************************/ 
+		else {
 				//	************************
 				//	Message is valid so now we prepare to pass it along to the Lex API.
 				//	************************

@@ -36,13 +36,13 @@ exports.handler = (event, context, callback) => {
 		//	Any other source will be rejected.
 		//	************************
 		} else if (!twilio.validateRequest(process.env.TWILIO_AUTH_TOKEN,
-																		event.params.header['X-Twilio-Signature'],
-																		process.env.API_GATEWAY_URL,
-																		twilioSMS)) {
+					event.params.header['X-Twilio-Signature'],
+					process.env.API_GATEWAY_URL,
+					twilioSMS)) {
 			var error = new Error("Twilio signature could not be validated.");
 			callback(error);
 		}
-		****************************************************************/ 
+		****************************************************************/
 		else {
 				//	************************
 				//	Message is valid so now we prepare to pass it along to the Lex API.

@@ -54,9 +54,7 @@ exports.handler = (event, context, callback) => {
 				  botAlias: process.env.BOT_ALIAS,
 				  botName: process.env.BOT_NAME,
 				  inputText: twilioSMS.Body,
-				  userId: userNumber,
-				  sessionAttributes: {
-				  }
+				  userId: userNumber
 				};
 				lexruntime.postText(params, function(err, data) {
 					var twimlResponse = new twilio.TwimlResponse();
